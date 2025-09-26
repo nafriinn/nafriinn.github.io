@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nafrin Nawshad | CSE Student Portfolio</title>
+    <title>Nafrin Nawshad | Vibrant CSE Student Portfolio</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for custom font (Inter) -->
+    <!-- Configure Tailwind for custom font (Inter) and vibrant colors -->
     <script>
         tailwind.config = {
             theme: {
@@ -15,9 +15,9 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'primary-blue': '#1e40af',
-                        'secondary-gray': '#f3f4f6',
-                        'accent-cyan': '#06b6d4',
+                        'primary-violet': '#6d28d9', /* Deep Violet */
+                        'accent-teal': '#14b8a6',   /* Vibrant Teal/Turquoise */
+                        'background-light': '#f3f4f6', /* Lighter gray background */
                     }
                 }
             }
@@ -29,111 +29,120 @@
         /* General styling and scroll behavior */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #e5e7eb; /* Light gray background */
+            background-color: #e5e7eb; /* Soft light background */
         }
-        /* Custom header gradient */
+        /* Custom header gradient for a vibrant look */
         .header-bg {
-            background: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%);
+            /* Fun, energetic gradient from violet to teal */
+            background: linear-gradient(135deg, #a78bfa 0%, #14b8a6 100%);
         }
         .card {
+            /* Stronger, fun shadow */
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        /* More dynamic hover effect */
         .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-5px) rotate(1deg); /* Slight lift and subtle rotation */
+            box-shadow: 0 25px 50px -12px rgba(109, 40, 217, 0.4); /* Violet glow shadow */
         }
     </style>
 </head>
 <body class="antialiased min-h-screen">
 
-    <!-- Header Section -->
-    <header class="header-bg py-10 shadow-lg">
+    <!-- Header Section (Uses the new gradient background) -->
+    <header class="header-bg py-12 shadow-2xl">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+            <h1 class="text-5xl sm:text-6xl font-extrabold text-white tracking-tight transform hover:scale-105 transition duration-300">
                 Nafrin Nawshad
             </h1>
-            <p class="text-xl text-gray-200 mt-2">
-                First-Year Computer Science and Engineering Student
+            <p class="text-xl text-violet-100 mt-3 font-medium">
+                Future Software Engineer | Vidya Academy of Science and Technology
             </p>
         </div>
     </header>
 
     <!-- Main Content Container -->
-    <main class="max-w-4xl mx-auto px-4 py-12 space-y-12">
+    <main class="max-w-4xl mx-auto px-4 py-16 space-y-12">
 
         <!-- 1. About/Introduction Section -->
-        <section class="bg-white p-8 rounded-xl shadow-2xl card">
-            <h2 class="text-2xl font-bold text-primary-blue border-b-2 border-accent-cyan pb-2 mb-4 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
-                About Me
+        <section class="bg-white p-8 rounded-2xl card border-t-4 border-accent-teal">
+            <h2 class="text-3xl font-extrabold text-primary-violet border-b-4 border-accent-teal pb-3 mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-accent-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                Hello World! (About Me)
             </h2>
             <p class="text-gray-700 leading-relaxed text-lg">
-                Hello! I'm **Nafrin Nawshad**, an aspiring Computer Science and Engineering student based in **Thrissur**, Kerala. I am currently completing my first year in the CSE program at the esteemed **Vidya Academy of Science and Technology (VAST)**.
+                I'm **Nafrin Nawshad**, a passionate first-year Computer Science and Engineering student from **Thrissur**, currently navigating the exciting world of code at the **Vidya Academy of Science and Technology (VAST)**.
             </p>
             <p class="text-gray-700 leading-relaxed text-lg mt-4">
-                I'm passionate about technology, problem-solving, and the endless possibilities within software development. I look forward to exploring core concepts in programming, data structures, and algorithms during my studies.
+                My journey in CSE has just begun, focusing on building solid foundations in programming and exploring innovative solutions. I am driven by curiosity and excited to translate complex ideas into functional technology.
             </p>
-            <div class="mt-6 text-center">
-                <span class="inline-block bg-accent-cyan text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
-                    Location: Thrissur, Kerala
-                </span>
+            <div class="mt-8 text-center">
+                <!-- Fun button style -->
+                <button class="bg-primary-violet text-white text-md font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-violet-700 transition duration-300 transform hover:scale-105">
+                    Connect with me!
+                </button>
             </div>
         </section>
 
         <!-- 2. Education Section -->
-        <section class="bg-white p-8 rounded-xl shadow-2xl card">
-            <h2 class="text-2xl font-bold text-primary-blue border-b-2 border-accent-cyan pb-2 mb-4 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                Education
+        <section class="bg-white p-8 rounded-2xl shadow-2xl card border-t-4 border-primary-violet">
+            <h2 class="text-3xl font-extrabold text-primary-violet border-b-4 border-accent-teal pb-3 mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-accent-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                Academic Launchpad
             </h2>
-            <div class="space-y-4">
-                <div class="p-4 bg-secondary-gray rounded-lg">
-                    <h3 class="text-xl font-semibold text-gray-800">B.Tech in Computer Science and Engineering</h3>
-                    <p class="text-primary-blue font-medium">Vidya Academy of Science and Technology (VAST)</p>
-                    <p class="text-gray-500 text-sm mt-1">First Year Student (Ongoing)</p>
-                    <p class="text-gray-600 mt-2 text-sm">Focused on building strong foundational knowledge in computing and engineering principles.</p>
+            <div class="space-y-6">
+                <div class="p-5 bg-background-light rounded-xl border border-gray-200 hover:border-accent-teal transition duration-300">
+                    <h3 class="text-xl font-bold text-gray-900">B.Tech in Computer Science and Engineering</h3>
+                    <p class="text-primary-violet font-medium">Vidya Academy of Science and Technology (VAST)</p>
+                    <p class="text-gray-500 text-sm mt-1 font-mono">Status: First Year (Currently Engaged)</p>
+                    <p class="text-gray-600 mt-2 text-sm">Thrissur, Kerala — Diving deep into programming fundamentals and engineering principles.</p>
                 </div>
             </div>
         </section>
 
         <!-- 3. Placeholder for Skills -->
-        <section class="bg-white p-8 rounded-xl shadow-2xl card">
-            <h2 class="text-2xl font-bold text-primary-blue border-b-2 border-accent-cyan pb-2 mb-4 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                Core Skills
+        <section class="bg-white p-8 rounded-2xl shadow-2xl card border-t-4 border-accent-teal">
+            <h2 class="text-3xl font-extrabold text-primary-violet border-b-4 border-accent-teal pb-3 mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-accent-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                Current Skill Set (Loading...)
             </h2>
             <div class="flex flex-wrap gap-3">
-                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">C/C++ (Learning)</span>
-                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Fundamentals of Programming</span>
-                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">HTML & CSS (Getting Started)</span>
-                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Logical Thinking</span>
-                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Placeholder: Add more skills!</span>
+                <!-- Updated skill badge styling for vibrancy -->
+                <span class="bg-accent-teal text-white text-sm font-bold px-4 py-2 rounded-full shadow-md hover:shadow-lg transition duration-200">C/C++ Fundamentals</span>
+                <span class="bg-primary-violet text-white text-sm font-bold px-4 py-2 rounded-full shadow-md hover:shadow-lg transition duration-200">Problem Solving</span>
+                <span class="bg-yellow-400 text-gray-800 text-sm font-bold px-4 py-2 rounded-full shadow-md hover:shadow-lg transition duration-200">HTML & CSS</span>
+                <span class="bg-pink-400 text-white text-sm font-bold px-4 py-2 rounded-full shadow-md hover:shadow-lg transition duration-200">Eagerness to Learn!</span>
             </div>
         </section>
 
         <!-- 4. Placeholder for Projects -->
-        <section class="bg-white p-8 rounded-xl shadow-2xl card">
-            <h2 class="text-2xl font-bold text-primary-blue border-b-2 border-accent-cyan pb-2 mb-4 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-7.77 7.77a2 2 0 0 1-2.83-2.83l7.78-7.78a6 6 0 0 1 7.94-7.94z"></path></svg>
-                Projects
+        <section class="bg-white p-8 rounded-2xl shadow-2xl card border-t-4 border-primary-violet">
+            <h2 class="text-3xl font-extrabold text-primary-violet border-b-4 border-accent-teal pb-3 mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-accent-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-7.77 7.77a2 2 0 0 1-2.83-2.83l7.78-7.78a6 6 0 0 1 7.94-7.94z"></path></svg>
+                My Creations (Projects)
             </h2>
-            <div class="p-6 bg-secondary-gray rounded-lg border-l-4 border-accent-cyan">
-                <p class="text-gray-700">
-                    This section is ready for your first coding projects! As you complete assignments or personal side projects (even small ones like a basic calculator or a simple website), update this area with a title, description, and link to the code.
+            <div class="p-6 bg-background-light rounded-xl border-l-4 border-pink-500 shadow-inner">
+                <p class="text-gray-700 font-semibold">
+                    **Project Spotlight:** This section is waiting for your cool creations! Start documenting your class assignments, basic web pages, or any fun programs you write.
                 </p>
                 <p class="text-gray-500 text-sm mt-3">
-                    Example: **Project Title:** Simple CLI Todo List | **Technologies:** C++ | **Role:** Solo Developer
+                    Tip: Even small projects, like a command-line quiz or a basic portfolio update, demonstrate practical application of your learning.
                 </p>
+                <!-- Placeholder button -->
+                <button class="mt-4 text-accent-teal hover:text-primary-violet font-medium transition duration-200">
+                    [Future GitHub Link]
+                </button>
             </div>
         </section>
 
     </main>
 
     <!-- Footer Section -->
-    <footer class="header-bg mt-12 py-6">
-        <div class="max-w-4xl mx-auto px-4 text-center text-gray-200">
-            <p>&copy; 2025 Nafrin Nawshad. All rights reserved.</p>
-            <p class="text-sm mt-2">Built with curiosity and code.</p>
+    <footer class="header-bg mt-16 py-8">
+        <div class="max-w-4xl mx-auto px-4 text-center text-gray-50">
+            <p class="font-light">&copy; 2025 Nafrin Nawshad. Powered by curiosity.</p>
+            <p class="text-xs mt-1 opacity-80">Thrissur | Vidya Academy of Science and Technology</p>
         </div>
     </footer>
 
